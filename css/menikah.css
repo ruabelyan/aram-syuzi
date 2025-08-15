@@ -22,8 +22,10 @@ html {
 .navbar-item {
   line-height: 38px;
   font-weight: 600;
+  text-transform: ;
   letter-spacing: 1px;
   font-size: 1rem;
+  box-shadow:  ;
 }
 
 .navbar-item.is-active{
