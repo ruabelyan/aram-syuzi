@@ -22,10 +22,8 @@ html {
 .navbar-item {
   line-height: 38px;
   font-weight: 600;
-  text-transform: ;
   letter-spacing: 1px;
   font-size: 1rem;
-  box-shadow:  ;
 }
 
 .navbar-item.is-active{
@@ -39,7 +37,7 @@ html {
 
 .hero {
   background-image: url('../image/bg.jpg');
-  background: linear-gradient(rgba(153, 110, 109, 0.65), rgba(153, 110, 109, 0.65)), rgba(0, 0, 0, 0.55) url("") no-repeat;
+  background: linear-gradient(rgba(153, 110, 109, 0.65), rgba(153, 110, 109, 0.65)), rgba(0, 0, 0, 0.55) url("../image/bg.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;
   color: white;
