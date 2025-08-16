@@ -18,6 +18,24 @@
     <link rel="stylesheet" href="https://unpkg.com/bulma-tooltip@0.1.5/dist/bulma-tooltip.min.css" />
     <link rel="stylesheet" type="text/css" href="css/menikah.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css" />
+    <style>
+      @media (max-width: 768px) {
+        .timeline-line {
+          display: none !important;
+        }
+        .timeline-event {
+          flex-direction: column !important;
+          text-align: center !important;
+        }
+        .event-content {
+          padding: 0 !important;
+          margin-bottom: 1rem !important;
+        }
+        .timeline-dot {
+          display: none !important;
+        }
+      }
+    </style>
     <script
       src="https://kit.fontawesome.com/2828f7885a.js"
       integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
@@ -166,40 +184,122 @@
     <div class="main-content">
     <!-- Begin regular-section-->
      <section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
-       <div> 
-        <div data-aos="fade-up" data-aos-easing="linear">
-          <h5 class="bodytext" data-aos="fade-up" data-aos-easing="linear">
-            ՕՐՎԱ ԾՐԱԳԻՐ<br/>
-          </h5>
+        <div> 
+          <div data-aos="fade-up" data-aos-easing="linear">
+            <h1 class="title has-text-centered section-title" style="font-family: 'Times New Roman', serif; font-size: 2.5rem; margin-bottom: 1rem;">ՕՐՎԱ ԾՐԱԳԻՐ</h1>
+            <div style="width: 100px; height: 2px; background-color: #000; margin: 0 auto 3rem;"></div>
+          </div>
+
+          <!-- Timeline Container -->
+          <div class="timeline-container" style="max-width: 800px; margin: 0 auto; position: relative;">
+            <!-- Timeline Line -->
+            <div class="timeline-line" style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background-color: #000; transform: translateX(-50%); z-index: 2;"></div>
+            
+            <!-- Event 1: Groom's House -->
+            <div class="timeline-event" style="display: flex; align-items: center; margin-bottom: 3rem; position: relative;">
+              <div class="event-content" style="flex: 1; text-align: right; padding-right: 3rem;">
+                <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 0.5rem;">
+                  <span style="font-size: 1.2rem; font-weight: 600; margin-right: 0.5rem;">ՓԵՍԱՅԻ ՏՈՒՆ</span>
+                  <span style="font-size: 1.5rem;">👔</span>
+                </div>
+                <div style="font-size: 2rem; font-weight: bold; margin: 1rem 0; border-top: 1px solid #000; padding-top: 0.5rem;">10:30</div>
+                <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 1rem;">
+                  <span style="margin-right: 0.5rem;">📍</span>
+                  <span>Վիլնյուս 107</span>
+                </div>
+                <a href="https://maps.app.goo.gl/uZRVs6RZ9gMk4ZZaA" target="_blank" class="button btn-cta" style="border-radius: 25px; padding: 0.5rem 1.5rem; font-size: 0.9rem;">
+                  ԻՆՉՊԵՍ ՀԱՍՆԵԼ
+                </a>
+              </div>
+              
+              <!-- Timeline Dot -->
+              <div class="timeline-dot" style="position: absolute; left: 50%; width: 12px; height: 12px; background-color: #000; border-radius: 50%; transform: translateX(-50%); z-index: 2;"></div>
+              
+              <div class="event-content" style="flex: 1; padding-left: 3rem;"></div>
+            </div>
+
+            <!-- Event 2: Bride's House -->
+            <div class="timeline-event" style="display: flex; align-items: center; margin-bottom: 3rem; position: relative;">
+              <div class="event-content" style="flex: 1; padding-right: 3rem;"></div>
+              
+              <!-- Timeline Dot -->
+              <div class="timeline-dot" style="position: absolute; left: 50%; width: 12px; height: 12px; background-color: #000; border-radius: 50%; transform: translateX(-50%); z-index: 2;"></div>
+              
+              <div class="event-content" style="flex: 1; text-align: left; padding-left: 3rem;">
+                <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                  <span style="font-size: 1.5rem; margin-right: 0.5rem;">👰</span>
+                  <span style="font-size: 1.2rem; font-weight: 600;">ՀԱՐՍԻԿԻ ՏՈՒՆ</span>
+                </div>
+                <div style="font-size: 2rem; font-weight: bold; margin: 1rem 0; border-top: 1px solid #000; padding-top: 0.5rem;">12:00</div>
+                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                  <span style="margin-right: 0.5rem;">📍</span>
+                  <span>Գյուլիքևվխյան 21</span>
+                </div>
+                <a href="https://maps.app.goo.gl/9ZL5hhZ2riJ7wBT5A" target="_blank" class="button btn-cta" style="border-radius: 25px; padding: 0.5rem 1.5rem; font-size: 0.9rem;">
+                  ԻՆՉՊԵՍ ՀԱՍՆԵԼ
+                </a>
+              </div>
+            </div>
+
+            <!-- Event 3: Wedding Ceremony -->
+            <div class="timeline-event" style="display: flex; align-items: center; margin-bottom: 3rem; position: relative;">
+              <div class="event-content" style="flex: 1; text-align: right; padding-right: 3rem;">
+                <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 0.5rem;">
+                  <span style="font-size: 1.2rem; font-weight: 600; margin-right: 0.5rem;">ՊՍԱԿԱԴՐՈՒԹՅՈՒՆ</span>
+                  <span style="font-size: 1.5rem;">💍</span>
+                </div>
+                <div style="font-size: 2rem; font-weight: bold; margin: 1rem 0; border-top: 1px solid #000; padding-top: 0.5rem;">13:45</div>
+                <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 1rem;">
+                  <span style="margin-right: 0.5rem;">📍</span>
+                  <span>Սուրբ Մարիամ Աստվածածին եկեղեցի</span>
+                </div>
+                <a href="https://maps.app.goo.gl/Ji382J431SQ9M4CP7" target="_blank" class="button btn-cta" style="border-radius: 25px; padding: 0.5rem 1.5rem; font-size: 0.9rem;">
+                  ԻՆՉՊԵՍ ՀԱՍՆԵԼ
+                </a>
+              </div>
+              
+              <!-- Timeline Dot -->
+              <div class="timeline-dot" style="position: absolute; left: 50%; width: 12px; height: 12px; background-color: #000; border-radius: 50%; transform: translateX(-50%); z-index: 2;"></div>
+              
+              <div class="event-content" style="flex: 1; padding-left: 3rem;"></div>
+            </div>
+
+            <!-- Event 4: Wedding Reception -->
+            <div class="timeline-event" style="display: flex; align-items: center; margin-bottom: 3rem; position: relative;">
+              <div class="event-content" style="flex: 1; padding-right: 3rem;"></div>
+              
+              <!-- Timeline Dot -->
+              <div class="timeline-dot" style="position: absolute; left: 50%; width: 12px; height: 12px; background-color: #000; border-radius: 50%; transform: translateX(-50%); z-index: 2;"></div>
+              
+              <div class="event-content" style="flex: 1; text-align: left; padding-left: 3rem;">
+                <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                  <span style="font-size: 1.5rem; margin-right: 0.5rem;">🎉</span>
+                  <span style="font-size: 1.2rem; font-weight: 600;">ՀԱՐՍԱՆԵԿԱՆ ՀԱՆԴԻՍՈՒԹՅՈՒՆ</span>
+                </div>
+                <div style="font-size: 2rem; font-weight: bold; margin: 1rem 0; border-top: 1px solid #000; padding-top: 0.5rem;">17:00</div>
+                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                  <span style="margin-right: 0.5rem;">📍</span>
+                  <span>Հրաշք այգի ռեստորանային համալիր</span>
+                </div>
+                <a href="https://maps.app.goo.gl/SaR9Tv7DxiVB8qzR8" target="_blank" class="button btn-cta" style="border-radius: 25px; padding: 0.5rem 1.5rem; font-size: 0.9rem;">
+                  ԻՆՉՊԵՍ ՀԱՍՆԵԼ
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <span class="space40px"></span>
+          <span class="space40px"></span>
         </div>
-
-        <div data-aos="fade-up" data-aos-easing="linear">
-        <h5 class="bodytext" data-aos="fade-up" data-aos-easing="linear"> ժ10:30 Փեսայի տուն (Վիլնյուս 107)</h5>
-      </div>
-      <div data-aos="fade-up" data-aos-easing="linear">
-
-        <h5 class="bodytext" data-aos="fade-up" data-aos-easing="linear">ժ12:00 Հարսիկի տուն ( Գյուլիքևվխյան 21)</h5>
-      </div>
-      <div data-aos="fade-up" data-aos-easing="linear">
-        <h5 class="bodytext" data-aos="fade-up" data-aos-easing="linear">ժ13:45 Պսակադրություն ( Սուրբ Մարիամ Աստվածածին եկեղեցի)</h5>
-           </div>
-      <div data-aos="fade-up" data-aos-easing="linear">
-        
-        <h5 class="bodytext" data-aos="fade-up" data-aos-easing="linear"> ժ17:00 Հարսանեկան հանդիսություն (Հրաշք այգի ռեստորանային համալիր)</h5>
-      </div>
-      
-        <span class="space40px"></span>
-        <span class="space40px"></span>
-      </div>
-        <div style="padding-top: 30px;" data-aos="fade-up" data-aos-easing="linear">
-          <div class="nama-lengkap" >
-            Արամ
-          </div>
-          <div class="ampersand">&</div>
-          <div class="nama-lengkap">
+         <div style="padding-top: 30px;" data-aos="fade-up" data-aos-easing="linear">
+            <div class="nama-lengkap" >
+              Արամ
+            </div>
+            <div class="ampersand">&</div>
+            <div class="nama-lengkap">
           Սյուզի
-          </div>
-           
+            </div>
+             
         </div>
         <span class="space40px"></span>
         <div data-aos="fade-up" data-aos-easing="linear">
